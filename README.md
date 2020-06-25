@@ -14,10 +14,13 @@ The class PSCADVar import all the variables data from the output of both program
 
 PSCADVar reads data from .out files: just give the .INF path as argument
 
-__________________
+**Parameters**:
 
-**Requirements**
+INF_path: str, mandatory. 
+It's the path of the .inf file
 
-- **Python 3.8**
-- **Packages**: all of them are listed in "requirements.txt"
-  - To install all of them use: **pip install -r requirements.txt**
+writecsv: bool, optional. Default: True
+Creates a .CSV file with all the .OUT variables and a header. 
+
+delout:   bool, optional. Default: False
+Deletes the .OUT files once they were already read
