@@ -1,16 +1,9 @@
-###########################################################################
-# Libraries and packages
-###########################################################################
 import os
 import re
 import math
 import pandas as pd
 import numpy as np
 
-
-###########################################################################
-# Definition of class
-###########################################################################
 
 class PSCADVar(object):
     """ Documentation: 
@@ -19,10 +12,10 @@ class PSCADVar(object):
         INF_path: str, mandatory. 
         It's the path of the .inf file
 
-        writecsv: bool, optional. 
-        Creates a new .CSV file with the .OUT variables
+        writecsv: bool, optional. Default: True
+        Creates a .CSV file with all the .OUT variables and a header. 
         
-        delout:   bool, optional. 
+        delout:   bool, optional. Default: False
         Deletes the .OUT files once they were already read
         
        """
