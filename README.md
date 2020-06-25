@@ -20,10 +20,12 @@ INF_path: str, mandatory.
 It's the path of the .inf file
 
 writecsv: bool, optional. Default: True
-Creates a .CSV file with all the .OUT variables and a header. 
+
+ - Creates a .CSV file with all the .OUT variables and a header. 
 
 delout:   bool, optional. Default: False
-Deletes the .OUT files once they were already read
+
+ - Deletes the .OUT files once they were already read
 
 ___________________
 
