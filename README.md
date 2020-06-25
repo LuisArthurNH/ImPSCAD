@@ -30,7 +30,27 @@ PSCADVar reads data from .out files: just give the .INF path as argument
 
 ___________________
 
-**License**
+## Usage
+
+In the following paragraphs, one can learn how to get and use ImPSCAD in your own projects.
+
+###  Getting it
+
+To download it, use Pypi via pip.
+```sh
+$ pip install ImPSCAD
+```
+
+### Using it
+
+```Python
+from ImPSCAD import PSCADVar
+```
+
+
+___________________
+
+## License
 
 MIT License
 Copyright (c) 2020 Luis Arthur Novais Haddad
