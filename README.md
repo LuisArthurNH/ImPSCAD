@@ -18,7 +18,8 @@ PSCADVar reads data from all of the .out files. Once these files does not have h
 
 **INF_path:** str, mandatory. 
 
- - It's the path of the .inf file
+ - It's the path of the .inf file 
+ - Example: "C:\Users\Your_Name\PSCAD\noname.inf"
 
 **writecsv:** bool, optional. Default: True
 
