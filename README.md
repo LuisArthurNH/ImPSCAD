@@ -1,4 +1,4 @@
-# GetVar
+# Import PSCAD Variables - ImPSCAD
 
 ## Motivation
 
