@@ -3,7 +3,7 @@ setup(
   name = 'ImPSCAD',         
   packages = ['ImPSCAD'],  
   version = '0.1',      
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
+  license='MIT',
   description = 'Import variables from a PSCAD/EMTDC simulation', 
   author = 'Luis Arthur Novais Haddad',
   author_email = 'luis.novais@engenharia.ufjf.br',
