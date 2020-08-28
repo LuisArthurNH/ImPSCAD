@@ -3,9 +3,9 @@ import re
 import math
 import pandas as pd
 import numpy as np
-from functools import  reduce
+from functools import reduce
 
-def ImPSCAD(INF_path):
+def PSCADVar(INF_path):
 
     with open(INF_path) as myfile:  # Open all the lines in the inf path
             lines = myfile.readlines()
