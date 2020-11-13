@@ -43,7 +43,7 @@ $ pip install ImPSCAD
 ```Python
 from ImPSCAD import PSCADVar
 
-path = r"C:\Users\Your_Name\PSCAD/simulation_project.gf46\noname.inf"
+path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46\noname.inf"
 PSCADVar(path) # after running this line, just read the .csv file using Pandas
 ```
 
