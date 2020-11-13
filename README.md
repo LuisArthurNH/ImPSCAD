@@ -23,7 +23,7 @@ in order to use all this data.
 **INF_path:** str, mandatory. 
 
  - It's the path of the .inf file 
- - Example: "C:\Users\Your_Name\PSCAD/simulation_project.gf46\noname.inf"
+ - Example: "C:\Users\Your_Name\PSCAD\simulation_project.gf46\noname.inf"
 
 ___________________
 
@@ -44,7 +44,7 @@ $ pip install ImPSCAD
 from ImPSCAD import PSCADVar
 
 path = r"C:\Users\Your_Name\PSCAD/simulation_project.gf46\noname.inf"
-PSCADVar(path) % after this is run, just read the .csv file using Pandas
+PSCADVar(path) # after running this line, just read the .csv file using Pandas
 ```
 
 
