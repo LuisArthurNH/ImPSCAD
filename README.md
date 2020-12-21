@@ -53,12 +53,12 @@ $ pip install ImPSCAD
 ```Python
 from ImPSCAD import PSCADVar
 
-path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46" % use r before the str to avoid unicode problems
+path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46"  # use r before the str to avoid unicode problems
 file_name = "svm_inv"
 
 PSCADVar(path, file_name, delete_out = True) 
 
-% Tip: Read the .csv file using Pandas
+# Tip: Read the .csv file using Pandas
 
 csv_path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46\svm_inv.csv"
 variables = pd.read_csv(csv_path)
