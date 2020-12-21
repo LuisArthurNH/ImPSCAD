@@ -12,7 +12,7 @@ __________________
 ## Description
 
 In order to solve this problem, this package was created: by using the function PSCADVar, it will create a unique .csv file which contains all of the variables with
-the proper header.
+the proper header. Besides that, once the .out files can get quite big, it is possible to delete them all after reading the values.
 
 Once one execute the function PSCADVar, the .csv file will be created in the same folder as the .inf/.out files are. It is recommended that one use the package Pandas
 in order to use all this data later.
