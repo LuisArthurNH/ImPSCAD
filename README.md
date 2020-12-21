@@ -53,7 +53,7 @@ $ pip install ImPSCAD
 ```Python
 from ImPSCAD import PSCADVar
 
-path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46"  # use r before the str to avoid unicode problems
+path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46"  # use r to avoid unicode problems
 file_name = "svm_inv"
 
 PSCADVar(path, file_name, delete_out = True) 
