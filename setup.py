@@ -8,7 +8,7 @@ setup(
   author = 'Luis Arthur Novais Haddad',
   author_email = 'luis.novais@engenharia.ufjf.br',
   url = 'https://github.com/LuisArthurNH',
-  download_url = 'https://github.com/LuisArthurNH/ImPSCAD/archive/ImPSCAD_v_02.1.tar.gz',
+  download_url = 'https://github.com/LuisArthurNH/ImPSCAD/archive/ImPSCAD_v_0.3.0.tar.gz',
   keywords = ['PSCAD', 'Variables', 'Import','.CSV','python','MATLAB'],
   install_requires=[            
           'pandas',
