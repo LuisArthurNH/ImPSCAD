@@ -2,8 +2,8 @@ from distutils.core import setup
 setup(
   name = 'ImPSCAD',         
   packages = ['ImPSCAD'],  
-  version = '0.2.1',      
-  license='MIT',
+  version = '0.3.0',      
+  license ='MIT',
   description = 'Create a unique csv file from a out file from PSCAD/EMTDC simulations', 
   author = 'Luis Arthur Novais Haddad',
   author_email = 'luis.novais@engenharia.ufjf.br',
@@ -12,7 +12,7 @@ setup(
   keywords = ['PSCAD', 'Variables', 'Import','.CSV','python','MATLAB'],
   install_requires=[            
           'pandas',
-          'numpy',
+          'pathlib',
       ],
   classifiers=[
     'Development Status :: 4 - Beta',      

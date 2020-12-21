@@ -12,18 +12,28 @@ __________________
 ## Description
 
 In order to solve this problem, this package was created: by using the function PSCADVar, it will create a unique .csv file which contains all of the variables with
-the proper header. In the previous version (ImPSCAD_v01) PSCADVar was a class, but in order to improve performance, it is now a function.
+the proper header. Besides that, once the .out files can get quite big, it is possible to delete them all after reading the values.
 
 Once one execute the function PSCADVar, the .csv file will be created in the same folder as the .inf/.out files are. It is recommended that one use the package Pandas
-in order to use all this data.
+in order to use all this data later.
 
 
 ### Parameters
 
-**INF_path:** str, mandatory. 
+**path:** str, mandatory. 
 
- - It's the path of the .inf file 
- - Example: "C:\Users\Your_Name\PSCAD\simulation_project.gf46\noname.inf"
+ - It's the path of the directory where the .out file 
+ - Example: r"C:\Users\Your_Name\PSCAD\simulation_project.gf46"
+
+**file_name:** str, mandatory.
+
+ - It's the name of the .out file. Must be written without the extension
+ - Example: "svm_inv"
+ 
+**delete_out:** boolean, optional.
+
+ - After reading, if True it will delete all the .out files that were read 
+ - Default: False
 
 ___________________
 
@@ -43,11 +53,16 @@ $ pip install ImPSCAD
 ```Python
 from ImPSCAD import PSCADVar
 
-path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46\noname.inf"
-PSCADVar(path) # after running this line, just read the .csv file using Pandas
+path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46"  # use r to avoid unicode problems
+file_name = "svm_inv"
+
+PSCADVar(path, file_name, delete_out = True) 
+
+# Tip: Read the .csv file using Pandas
+
+csv_path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46\svm_inv.csv"
+variables = pd.read_csv(csv_path)
 ```
-
-
 ___________________
 
 ## License
