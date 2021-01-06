@@ -30,7 +30,7 @@ in order to use all this data later.
  - It's the name of the .out file. Must be written without the extension
  - Example: "svm_inv"
  
-**delete_out:** boolean, optional.
+**del_out:** boolean, optional.
 
  - After reading, if True it will delete all the .out files that were read 
  - Default: False
@@ -56,7 +56,7 @@ from ImPSCAD import PSCADVar
 path = r"C:\Users\Your_Name\PSCAD\simulation_project.gf46"  # use r to avoid unicode problems
 file_name = "svm_inv"
 
-PSCADVar(path, file_name, delete_out = True) 
+PSCADVar(path, file_name, del_out = True) 
 
 # Tip: Read the .csv file using Pandas
 
