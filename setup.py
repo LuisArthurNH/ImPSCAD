@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'ImPSCAD',         
   packages = ['ImPSCAD'],  
-  version = '0.3.0',      
+  version = '0.3.1',      
   license ='MIT',
   description = 'Create a unique csv file from a out file from PSCAD/EMTDC simulations', 
   author = 'Luis Arthur Novais Haddad',

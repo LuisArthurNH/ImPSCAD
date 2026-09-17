@@ -3,7 +3,7 @@ import re
 import math
 import pandas as pd
 from functools import reduce
-from pathlib import PurePath
+from pathlib import Path
 
 def PSCADVar(path, file_name, del_out = False):
 
@@ -15,7 +15,7 @@ def PSCADVar(path, file_name, del_out = False):
     out_ex = '.out'
     csv_ex = '.csv'
 
-    INF_path = PurePath(path, file_name + inf_ex) # create path for the .inf file, which has the header
+    INF_path = Path(path) / (file_name + inf_ex)  # create path for the .inf file, which has the header
 
     with open(INF_path) as myfile:             # Open all the lines in the inf path
             lines = myfile.readlines()
@@ -72,10 +72,10 @@ def PSCADVar(path, file_name, del_out = False):
         else:
             OUT_name[ii] = "_" + str(ii + 1) + out_ex                # Create ending "_ii".out
 
-        OUT_path[ii] = PurePath(path, file_name + OUT_name[ii])  # replace in INF_path the.inf for the new end
+        OUT_path[ii] = Path(path) / (file_name + OUT_name[ii])  # build OS-native path to each .out file
 
     # Creates the path of the .CSV that's gonna be writen
-    CSV_path = PurePath(path, file_name + csv_ex) # Replaces the ending .inf with .csv
+    CSV_path = Path(path) / (file_name + csv_ex)  # build OS-native path for the output .csv
 
     ########################################################
     ### Treat the data
@@ -85,11 +85,12 @@ def PSCADVar(path, file_name, del_out = False):
     dff = []
 
     # Read all of the .out files and append them to the empty list
-    for path in OUT_path:
-        dff.append(pd.read_csv(path, delim_whitespace = True, header = None))
+    # sep=r'\s+' replaces the removed delim_whitespace=True (deprecated since pandas 2.2, removed in 3.0)
+    for out_path in OUT_path:
+        dff.append(pd.read_csv(out_path, sep=r'\s+', header=None, engine='python'))
 
         if del_out:
-            os.remove(path)
+            os.remove(out_path)
 
     # Create auxiliar variables
     ii = 0
